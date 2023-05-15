@@ -1,0 +1,29 @@
+[versions]
+flink = '1.17.0'
+scala = '2.12'
+log4j = '2.12.1'
+gson = '2.8.9'
+
+[plugins]
+
+[libraries]
+flink-streaming-java = { module = "org.apache.flink:flink-streaming-java", version.ref = "flink" }
+flink-streaming-scala = { module = "org.apache.flink:flink-streaming-scala_2.12", version.ref = "flink" }
+flink-clients = { module = "org.apache.flink:flink-clients", version.ref = "flink" }
+flink-table-api-java = { module = "org.apache.flink:flink-table-api-java", version.ref = "flink" }
+flink-table-api-java-bridge= { module = "org.apache.flink:flink-table-api-java-bridge", version.ref = "flink" }
+flink-connector-files= { module = "org.apache.flink:flink-connector-files", version.ref = "flink" }
+flink-json= { module = "org.apache.flink:flink-json", version.ref = "flink" }
+
+google-gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+
+[bundles]
+flinks = [
+    "flink-streaming-java",
+    "flink-clients",
+    "flink-streaming-scala",
+    "flink-table-api-java",
+    "flink-table-api-java-bridge",
+    "flink-connector-files",
+    "flink-json"
+]
