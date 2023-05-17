@@ -1,7 +1,7 @@
 package exercise.flink;
 
 import com.google.gson.Gson;
-import exercise.flink.model.Event;
+import exercise.flink.model.RawEvent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +14,10 @@ public class EventsGenerator {
         List<String> paths = List.of("product", "order", "comments");
         Random random = new Random();
         Gson gson = new Gson();
-        ArrayList<Event> events = new ArrayList<>();
+        ArrayList<RawEvent> rawEvents = new ArrayList<>();
 
         for (int i = 0; i < 20; i++) {
-            events.add(new Event(
+            rawEvents.add(new RawEvent(
                     names.get(random.nextInt(names.size())),
                     ids.get(random.nextInt(ids.size())),
                     paths.get(random.nextInt(paths.size())),
@@ -25,6 +25,6 @@ public class EventsGenerator {
                     1000 + i * random.nextInt(20)
             ));
         }
-        System.out.println(gson.toJson(events));
+        System.out.println(gson.toJson(rawEvents));
     }
 }
