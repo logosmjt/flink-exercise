@@ -1,0 +1,4 @@
+{"id":"1001","name":"moon cake","price":5000}
+{"id":"1002","name":"chocolate","price":4000}
+{"id":"1003","name":"chip","price":500}
+{"id":"1004","name":"coke cola","price":200}
